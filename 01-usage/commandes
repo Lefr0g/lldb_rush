@@ -1,0 +1,6 @@
+breakpoint set --name main
+process launch
+register read
+disassemble --name main
+nexti
+frame variable
