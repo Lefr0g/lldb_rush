@@ -1,21 +1,17 @@
 breakpoint set --name main
 process launch
-breakpoint set --file source.cpp --line 16
-breakpoint set --file source.cpp --line 19
+breakpoint set --file source.cpp --line 16 --ignore-count 1
+breakpoint set --file source.cpp --line 19 --one-shot 1
 breakpoint set --file source.cpp --line 32
 breakpoint set --file source.cpp --line 44
 process continue
+expression tab[0]=tab[1]
 process continue
-expr tab[0]=tab[1]
+expression tab[2]=tab[1]
 process continue
-expr tab[2]=tab[1]
+expression tab[1]=tab[1]^tab[2];tab[2]=tab[1]^tab[2];tab[1]=tab[1]^tab[2];count=0
 process continue
-expr tab[1]=tab[1]^tab[2];tab[2]=tab[1]^tab[2];tab[1]=tab[1]^tab[2]
-expr count=0
+expression tmp=min[0]+min[1]+min[2]
 process continue
-process continue
-process continue
-expr tmp=min[0]+min[1]+min[2]
-process continue
-expr biggest=(min[0]>min[1]?min[0]:min[1])>min[2]?(min[0]>min[1]?min[0]:min[1]):min[2]
+expression biggest=(min[0]>min[1]?min[0]:min[1])>min[2]?(min[0]>min[1]?min[0]:min[1]):min[2]
 process continue
