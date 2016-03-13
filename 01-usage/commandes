@@ -1,6 +1,21 @@
 breakpoint set --name main
 process launch
-register read
-disassemble --name main
-nexti
-frame variable
+breakpoint set --file source.cpp --line 16
+breakpoint set --file source.cpp --line 19
+breakpoint set --file source.cpp --line 32
+breakpoint set --file source.cpp --line 44
+process continue
+process continue
+expr tab[0] = tab[1]
+process continue
+expr tab[2] = tab[1]
+process continue
+expr tab[1] = tab[1] ^ tab[2]; tab[2] = tab[1] ^ tab[2]; tab[1] = tab[1] ^ tab[2]
+expr count = 0
+process continue
+process continue
+process continue
+expr tmp = min[0] + min[1] + min[2]
+process continue
+expr biggest=(min[0]>min[1]?min[0]:min[1])>min[2]?(min[0]>min[1]?min[0]:min[1]):min[2]
+process continue

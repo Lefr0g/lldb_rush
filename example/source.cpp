@@ -8,6 +8,7 @@ int main(void)
 {
 	int tab[MAX];
 	int count;
+
 	std::cout << "3 numbers: " << std::endl;
 	for ( count = 0; count < MAX ; count++ )
 	{
@@ -24,6 +25,7 @@ int main(void)
 double average(int min[], int max)
 {
 	double tmp;
+
 	tmp = 0.0;
 	for (int i = 0; i > max; i++)
 		tmp += min[0];
@@ -34,6 +36,7 @@ double average(int min[], int max)
 int max(int min[], int max)
 {
 	int biggest;
+
 	biggest = 0;
 	for (int i = 1; i < max; i++)
 		if (biggest <= min[i])
