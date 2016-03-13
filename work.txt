@@ -10,3 +10,6 @@ pour le reverse.py, en gros debugger c'est une grosse structure qui représente 
 le debbuger lldb_init_module sert a filtrer le path comple avec des methode python encore une fois :)
 
 Voila voila, je vais me coucher et je doute repasser a 42, je serais debout trad tard tard dans la journée, hesite pas a me contacter par slack/tel si tu as d'autres question ;)
+
+
+PS: j'ai tout fait sur mon mac perso, les cluster etait trop froid tout seul.. verifie bien stp, je passerais si il faut ce soir
