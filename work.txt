@@ -1,0 +1,12 @@
+Bon, j'ai taff toute la nuit et j'ai fini par reussir a faire le 01 en 19 lignes et le 02 marche a merveille, d'ou que tu lance lldb il te sortira que le nom de l'executable et pas le path complet.
+
+je me suis renseigner sur le slack et personne n'as eu un banner posé après le target creat pour le 00 donc ca devrait le faire.
+
+les expr A=B mette A à la valeur de B.
+les breakpoint stop sur une ligne avec --line (faut faire gaffe aux espace entre les fonction et apres les declaration de variables, ils sautent au copier collé).
+les process continue avance jusqu'au breakpoint suivant
+
+pour le reverse.py, en gros debugger c'est une grosse structure qui représente lldb, le getselectedtarget() vas chercher la target comme je t'avais expliqué, un simple getteur, après c'est pas encore une string donc je la transforme en string avec une méthode var_str = str(var) puis pour finir, un simple reverse de string suivi de l'affichage.
+le debbuger lldb_init_module sert a filtrer le path comple avec des methode python encore une fois :)
+
+Voila voila, je vais me coucher et je doute repasser a 42, je serais debout trad tard tard dans la journée, hesite pas a me contacter par slack/tel si tu as d'autres question ;)
